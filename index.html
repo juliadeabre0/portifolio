@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio Julia</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre Mim</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <h1>Bem-vindo ao Meu Portfólio</h1>
+                <p>Desenvolvedora Web | Criativa | Inovadora</p>
+            </div>
+            
+        </header>
+
+        <main>
+            <img src="img/ft.jpeg" alt="" width="190" height="270" class="foto">
+            
+            <section class="home" >
+                <h2>Início</h2>
+                <p>Olá! Eu sou Julia, uma desenvolvedora web especializada em criar experiências digitais.</p>
+            </section>
+
+            <section class="about" id="about">
+                <h2>Sobre Mim</h2>
+                <p>Sou apaixonada por tecnologia e desenvolvimento web. <br>Com 18 meses de experiência, crio soluções eficientes e elegantes para os desafios digitais.</p>
+            </section>
+
+            <section id="projects">
+                <h2>Projetos</h2>
+                <div class="project-list">
+                    <article class="project-item">
+                        <h3>Marília Mendonça</h3>
+                        <p>Acompanhe partes da historia da gigante escritora e compositora Marília Mendonça</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Arctic Monkeys</h3>
+                        <p>Acompanhe fragmentos desta banda que a cada dia cresce mais</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Flex-box</h3>
+                        <p>Projeto Realizado em sala de aula.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Node.js</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social">
+                <a href="https://github.com/juliadeabre0?tab=repositories">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/julia_abreu0?igsh=MWNjdDVhNzk1ajVqaw">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="top">
+                <div class="newsletter contact-form">
+                    <label>Entre em Contato !!!</label>   
+                    <form id="contactForm">
+                                         
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    <span id="nameError" class="error-message"></span>
+                    
+                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                    <span id="emailError" class="error-message"></span>
+                        
+                    <textarea id="message" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
+                    <span id="messageError" class="error-message"></span>
+            
+                    <button>Enviar</button>
+        </form>
+    </div>
+</div>
+
+            </div>
+        </footer>
+        
+                <script>
+                document.querySelectorAll('.nav a').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        alert('Formulário preenchido, mas as informações não foram enviadas.');
+        
+    });
+                </script>
+    </body>
+    </html>
